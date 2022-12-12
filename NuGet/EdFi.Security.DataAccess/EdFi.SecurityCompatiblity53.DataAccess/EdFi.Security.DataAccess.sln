@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdFi.SecurityCompatiblity53.DataAccess", "EdFi.SecurityCompatiblity53.DataAccess.csproj", "{654BC538-5357-4A44-B8C4-1CD2E8081067}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdFi.SecurityCompatiblity53.DataAccess.UnitTests", "..\EdFi.Security.DataAccess.UnitTests\EdFi.SecurityCompatiblity53.DataAccess.UnitTests.csproj", "{C675AB6F-820F-422D-8A14-9E2B56142E0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdFi.SecurityCompatiblity53.DataAccess.UnitTests", "..\EdFi.SecurityCompatiblity53.DataAccess.UnitTests\EdFi.SecurityCompatiblity53.DataAccess.UnitTests.csproj", "{C675AB6F-820F-422D-8A14-9E2B56142E0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
