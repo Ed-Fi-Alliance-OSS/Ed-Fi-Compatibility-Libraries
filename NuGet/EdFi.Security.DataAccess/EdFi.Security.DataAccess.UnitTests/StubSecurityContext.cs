@@ -11,7 +11,7 @@ using EdFi.SecurityCompatiblity53.DataAccess.Contexts;
 using EdFi.SecurityCompatiblity53.DataAccess.Models;
 using FakeItEasy;
 
-namespace EdFi.Security.DataAccess.UnitTests
+namespace EdFi.SecurityCompatiblity53.DataAccess.UnitTests
 {
     public class SecurityContextMock
     {

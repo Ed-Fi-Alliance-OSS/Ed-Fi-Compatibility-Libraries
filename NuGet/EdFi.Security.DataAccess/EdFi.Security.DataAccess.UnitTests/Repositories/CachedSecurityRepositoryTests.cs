@@ -11,7 +11,7 @@ using FakeItEasy;
 using NUnit.Framework;
 using Shouldly;
 
-namespace EdFi.Security.DataAccess.UnitTests.Repositories
+namespace EdFi.SecurityCompatiblity53.DataAccess.UnitTests.Repositories
 {
     [TestFixture]
     public class CachedSecurityRepositoryTests

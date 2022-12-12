@@ -11,7 +11,7 @@ using FakeItEasy;
 using NUnit.Framework;
 using Shouldly;
 
-namespace EdFi.Security.DataAccess.UnitTests.Contexts
+namespace EdFi.SecurityCompatiblity53.DataAccess.UnitTests.Contexts
 {
     [TestFixture]
     public class SecurityContextFactoryTests
