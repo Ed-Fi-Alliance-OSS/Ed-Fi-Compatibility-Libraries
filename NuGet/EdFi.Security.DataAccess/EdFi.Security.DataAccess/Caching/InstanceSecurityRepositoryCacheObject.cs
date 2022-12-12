@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using EdFi.Security.DataAccess.Models;
+using EdFi.SecurityCompatiblity53.DataAccess.Models;
 
-namespace EdFi.Security.DataAccess.Caching
+namespace EdFi.SecurityCompatiblity53.DataAccess.Caching
 {
     public class InstanceSecurityRepositoryCacheObject
     {

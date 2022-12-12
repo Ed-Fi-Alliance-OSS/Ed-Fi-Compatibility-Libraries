@@ -8,11 +8,11 @@ using System.Collections.Generic;
 using System.Threading;
 using EdFi.Common.Extensions;
 using EdFi.Common.Utils;
-using EdFi.Security.DataAccess.Contexts;
-using EdFi.Security.DataAccess.Models;
-using Action = EdFi.Security.DataAccess.Models.Action;
+using EdFi.SecurityCompatiblity53.DataAccess.Contexts;
+using EdFi.SecurityCompatiblity53.DataAccess.Models;
+using Action = EdFi.SecurityCompatiblity53.DataAccess.Models.Action;
 
-namespace EdFi.Security.DataAccess.Repositories
+namespace EdFi.SecurityCompatiblity53.DataAccess.Repositories
 {
     public class CachedSecurityRepository : SecurityRepository
     {

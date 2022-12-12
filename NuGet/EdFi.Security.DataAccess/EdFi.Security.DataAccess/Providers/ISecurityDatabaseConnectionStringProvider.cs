@@ -5,7 +5,7 @@
 
 using EdFi.Common.Database;
 
-namespace EdFi.Security.DataAccess.Providers
+namespace EdFi.SecurityCompatiblity53.DataAccess.Providers
 {
     public interface ISecurityDatabaseConnectionStringProvider : IDatabaseConnectionStringProvider { }
 }

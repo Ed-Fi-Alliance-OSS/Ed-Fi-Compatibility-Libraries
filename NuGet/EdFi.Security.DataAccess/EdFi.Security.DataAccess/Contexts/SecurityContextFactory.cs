@@ -6,9 +6,9 @@
 using System;
 using System.Collections.Generic;
 using EdFi.Common.Configuration;
-using EdFi.Security.DataAccess.Providers;
+using EdFi.SecurityCompatiblity53.DataAccess.Providers;
 
-namespace EdFi.Security.DataAccess.Contexts
+namespace EdFi.SecurityCompatiblity53.DataAccess.Contexts
 {
     public class SecurityContextFactory : ISecurityContextFactory
     {

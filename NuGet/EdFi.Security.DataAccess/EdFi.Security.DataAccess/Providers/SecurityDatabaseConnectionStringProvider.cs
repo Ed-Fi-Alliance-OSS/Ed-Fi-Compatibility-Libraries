@@ -5,7 +5,7 @@
 
 using EdFi.Common.Configuration;
 
-namespace EdFi.Security.DataAccess.Providers {
+namespace EdFi.SecurityCompatiblity53.DataAccess.Providers {
     public class SecurityDatabaseConnectionStringProvider: ISecurityDatabaseConnectionStringProvider
     {
         private readonly IConfigConnectionStringsProvider _configConnectionStringsProvider;

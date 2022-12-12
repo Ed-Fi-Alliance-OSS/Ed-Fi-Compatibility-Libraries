@@ -10,7 +10,7 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 using EdFi.Common;
 using EdFi.Common.Utils.Extensions;
 
-namespace EdFi.Security.DataAccess.Contexts
+namespace EdFi.SecurityCompatiblity53.DataAccess.Contexts
 {
     public class PostgresSecurityContext : SecurityContext
     {

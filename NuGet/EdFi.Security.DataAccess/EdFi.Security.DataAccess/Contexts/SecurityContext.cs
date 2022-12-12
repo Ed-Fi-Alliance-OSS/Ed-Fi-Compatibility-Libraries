@@ -4,10 +4,10 @@
 // See the LICENSE and NOTICES files in the project root for more information.
 
 using System.Data.Entity;
-using EdFi.Security.DataAccess.Models;
-using EdFi.Security.DataAccess.Utils;
+using EdFi.SecurityCompatiblity53.DataAccess.Models;
+using EdFi.SecurityCompatiblity53.DataAccess.Utils;
 
-namespace EdFi.Security.DataAccess.Contexts
+namespace EdFi.SecurityCompatiblity53.DataAccess.Contexts
 {
     public abstract class SecurityContext : DbContext, ISecurityContext
     {

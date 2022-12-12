@@ -4,9 +4,9 @@
 // See the LICENSE and NOTICES files in the project root for more information.
 
 using System.Collections.Generic;
-using EdFi.Security.DataAccess.Models;
+using EdFi.SecurityCompatiblity53.DataAccess.Models;
 
-namespace EdFi.Security.DataAccess.Repositories
+namespace EdFi.SecurityCompatiblity53.DataAccess.Repositories
 {
     public interface ISecurityRepository
     {

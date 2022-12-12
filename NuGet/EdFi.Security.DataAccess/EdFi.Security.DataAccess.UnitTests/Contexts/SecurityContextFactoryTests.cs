@@ -5,11 +5,11 @@
 
 using System;
 using EdFi.Common.Configuration;
+using EdFi.SecurityCompatiblity53.DataAccess.Contexts;
+using EdFi.SecurityCompatiblity53.DataAccess.Providers;
 using FakeItEasy;
-using EdFi.Security.DataAccess.Contexts;
 using NUnit.Framework;
 using Shouldly;
-using EdFi.Security.DataAccess.Providers;
 
 namespace EdFi.Security.DataAccess.UnitTests.Contexts
 {

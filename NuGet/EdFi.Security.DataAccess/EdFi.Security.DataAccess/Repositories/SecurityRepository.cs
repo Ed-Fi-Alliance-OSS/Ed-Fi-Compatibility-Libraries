@@ -7,9 +7,9 @@ using System;
 using System.Data.Entity;
 using System.Linq;
 using EdFi.Common;
-using EdFi.Security.DataAccess.Contexts;
+using EdFi.SecurityCompatiblity53.DataAccess.Contexts;
 
-namespace EdFi.Security.DataAccess.Repositories
+namespace EdFi.SecurityCompatiblity53.DataAccess.Repositories
 {
     public class SecurityRepository : SecurityRepositoryBase, ISecurityRepository
     {

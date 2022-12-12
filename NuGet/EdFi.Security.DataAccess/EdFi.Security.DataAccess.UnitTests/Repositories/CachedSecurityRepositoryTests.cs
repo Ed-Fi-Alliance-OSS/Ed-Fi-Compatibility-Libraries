@@ -5,8 +5,8 @@
 
 using System;
 using EdFi.Common.Utils;
-using EdFi.Security.DataAccess.Contexts;
-using EdFi.Security.DataAccess.Repositories;
+using EdFi.SecurityCompatiblity53.DataAccess.Contexts;
+using EdFi.SecurityCompatiblity53.DataAccess.Repositories;
 using FakeItEasy;
 using NUnit.Framework;
 using Shouldly;

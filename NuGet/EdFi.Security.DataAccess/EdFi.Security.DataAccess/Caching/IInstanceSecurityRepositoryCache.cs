@@ -1,4 +1,4 @@
-﻿namespace EdFi.Security.DataAccess.Caching
+﻿namespace EdFi.SecurityCompatiblity53.DataAccess.Caching
 {
     public interface IInstanceSecurityRepositoryCache
     {

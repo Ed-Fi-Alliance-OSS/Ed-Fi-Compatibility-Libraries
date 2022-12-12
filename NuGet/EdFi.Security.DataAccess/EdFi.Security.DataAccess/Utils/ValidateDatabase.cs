@@ -9,7 +9,7 @@ using System.Data.Entity;
 using System.Transactions;
 using EdFi.Common;
 
-namespace EdFi.Security.DataAccess.Utils
+namespace EdFi.SecurityCompatiblity53.DataAccess.Utils
 {
     public class ValidateDatabase<TContext> : IDatabaseInitializer<TContext>
         where TContext : DbContext

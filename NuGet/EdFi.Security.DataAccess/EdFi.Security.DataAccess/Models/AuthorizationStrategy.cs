@@ -6,7 +6,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace EdFi.Security.DataAccess.Models
+namespace EdFi.SecurityCompatiblity53.DataAccess.Models
 {
     public class AuthorizationStrategy
     {

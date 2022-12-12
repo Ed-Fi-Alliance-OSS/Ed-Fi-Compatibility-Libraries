@@ -30,6 +30,6 @@
     <PackageReference Include="Shouldly" Version="3.0.2" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EdFi.Security.DataAccess\EdFi.Security.DataAccess.csproj" />
+    <ProjectReference Include="..\EdFi.Security.DataAccess\EdFi.SecurityCompatiblity53.DataAccess.csproj" />
   </ItemGroup>
 </Project>
