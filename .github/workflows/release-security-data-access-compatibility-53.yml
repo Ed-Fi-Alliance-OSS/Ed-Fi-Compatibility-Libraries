@@ -17,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
+        working-directory: ./NuGet/EdFi.Security.DataAccess/53/
         shell: pwsh
     outputs:
       hash-code: ${{ steps.hash-code.outputs.hash-code }}
@@ -60,7 +61,7 @@ jobs:
         uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8 # v3.1.0
         with:
           name: "${{ env.PACKAGE_NAME }}-NuGet"
-          path: ./*.nupkg
+          path: ./NuGet/EdFi.Security.DataAccess/53/*.nupkg 
           if-no-files-found: error
           retention-days: 30
 
@@ -99,7 +100,7 @@ jobs:
           &$out generate `
               -b ./ `
               -bl ./buildfilelist.txt `
-              -bc "./Application/EdFi.$packageName" `
+              -bc "./NuGet/EdFi.$packageName" `
               -pn "EdFi.Suite3.$packageName" `
               -pv $version `
               -nsb https://ed-fi.org `
