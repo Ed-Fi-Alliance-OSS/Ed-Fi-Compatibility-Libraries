@@ -1,0 +1,21 @@
+version: '3'
+services:
+  db:
+    container_name: Postgres-SecurityCompatibility
+    image: postgres:12-alpine
+    restart: always
+    environment:
+    # If username and password not provided through and env file
+    # default to postgres/abcdefgh1!
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-P@ssW0rd}
+    ports:
+    # If no port provided through an env file, default to 5432
+      - ${POSTGRES_PORT:-5432}:5432
+    volumes:
+      - Postgres-SecurityCompatibility:/var/lib/postgresql/data
+
+volumes:
+  Postgres-SecurityCompatibility:
+    driver: local
+
