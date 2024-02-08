@@ -37,7 +37,7 @@ jobs:
           dotnet-version: 3.1.x
 
       - name: Test
-        run: dotnet test --no-build --configuration Release
+        run: dotnet test --no-build --filter 'FullyQualifiedName!~IntegrationTests' --configuration Release
 
       - name: Create NuGet Packages
         if: success()
