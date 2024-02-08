@@ -14,12 +14,5 @@ namespace EdFi.Common
         {
             return obj ?? throw new ArgumentNullException(parameterName);
         }
-
-        public static string ThrowIfWhitespace(string value, string parameterName)
-        {
-            return value.Trim().Length == 0 ?
-                throw new ArgumentException("Argument cannot be an empty string or whitespace", parameterName)
-                : value;
-        }
     }
 }
