@@ -2,7 +2,7 @@ version: '3'
 services:
   db:
     container_name: Postgres-SecurityCompatibility
-    image: postgres:12-alpine
+    image: postgres:13.13-alpine3.18@sha256:3cf9bba86013877375df15001a31b10be6834e56e69ac1cb1605f469c5c5bdd6
     restart: always
     environment:
     # If username and password not provided through and env file
