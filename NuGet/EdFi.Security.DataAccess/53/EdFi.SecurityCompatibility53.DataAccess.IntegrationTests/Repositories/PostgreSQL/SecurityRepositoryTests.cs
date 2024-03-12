@@ -7,31 +7,12 @@ using EdFi.SecurityCompatiblity53.DataAccess.Contexts;
 using EdFi.SecurityCompatiblity53.DataAccess.Repositories;
 using FakeItEasy;
 using Microsoft.Extensions.Configuration;
-using Npgsql;
 using NUnit.Framework;
 using Shouldly;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace EdFi.SecurityCompatibility53.DataAccess.IntegrationTests.Repositories.PostgreSQL
 {
-    public class DatabaseEngineDbConfiguration : DbConfiguration
-    {
-        public DatabaseEngineDbConfiguration()
-        {
-            const string name = "Npgsql";
-
-            SetProviderFactory(
-                providerInvariantName: name,
-                providerFactory: NpgsqlFactory.Instance);
-
-            SetProviderServices(
-                providerInvariantName: name,
-                provider: NpgsqlServices.Instance);
-
-            SetDefaultConnectionFactory(connectionFactory: new NpgsqlConnectionFactory());
-        }
-    }
-
     /// <summary>
     /// This is a light-weight set of integration tests that only tries to prove
     /// that there is database connectivity without trying to carefully validate
@@ -41,20 +22,24 @@ namespace EdFi.SecurityCompatibility53.DataAccess.IntegrationTests.Repositories.
     public class SecurityRepositoryTests
     {
         private SecurityRepository _repository;
+        protected PostgresSecurityContext Context;
 
         [SetUp]
         public void Setup()
         {
-            DbConfiguration.SetConfiguration(new DatabaseEngineDbConfiguration());
-
             var builder = new ConfigurationBuilder()
                .AddJsonFile($"appSettings.json", true, true);
 
             var config = builder.Build();
             var connectionString = config.GetConnectionString("PostgreSQL");
 
+            var optionsBuilder = new DbContextOptionsBuilder();
+            optionsBuilder.UseNpgsql(connectionString);
+            optionsBuilder.UseLowerCaseNamingConvention();
+            Context = new PostgresSecurityContext(optionsBuilder.Options);
+
             var contextFactory = A.Fake<ISecurityContextFactory>();
-            A.CallTo(() => contextFactory.CreateContext()).Returns(new PostgresSecurityContext(connectionString));
+            A.CallTo(() => contextFactory.CreateContext()).Returns(Context);
 
             _repository = new SecurityRepository(contextFactory);
         }

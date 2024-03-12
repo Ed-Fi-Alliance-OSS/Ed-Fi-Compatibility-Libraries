@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdFi.SecurityCompatiblity53
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdFi.SecurityCompatiblity53.DataAccess.UnitTests", "EdFi.SecurityCompatiblity53.DataAccess.UnitTests\EdFi.SecurityCompatiblity53.DataAccess.UnitTests.csproj", "{C675AB6F-820F-422D-8A14-9E2B56142E0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdFi.SecurityCompatibility53.DataAccess.IntegrationTests", "EdFi.SecurityCompatibility53.DataAccess.IntegrationTests\EdFi.SecurityCompatibility53.DataAccess.IntegrationTests.csproj", "{E64E7BFF-8749-415D-8D8E-217FFD086C94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdFi.SecurityCompatibility53.DataAccess.IntegrationTests", "EdFi.SecurityCompatibility53.DataAccess.IntegrationTests\EdFi.SecurityCompatibility53.DataAccess.IntegrationTests.csproj", "{E64E7BFF-8749-415D-8D8E-217FFD086C94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

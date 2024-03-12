@@ -9,6 +9,7 @@ using FakeItEasy;
 using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
 using Shouldly;
+using Microsoft.EntityFrameworkCore;
 
 namespace EdFi.SecurityCompatibility53.DataAccess.IntegrationTests.Repositories.MSSQL
 {
@@ -21,6 +22,7 @@ namespace EdFi.SecurityCompatibility53.DataAccess.IntegrationTests.Repositories.
     public class SecurityRepositoryTests
     {
         private SecurityRepository _repository;
+        protected SqlServerSecurityContext Context;
 
         [SetUp]
         public void Setup()
@@ -31,8 +33,12 @@ namespace EdFi.SecurityCompatibility53.DataAccess.IntegrationTests.Repositories.
             var config = builder.Build();
             var connectionString = config.GetConnectionString("MSSQL");
 
+            var optionsBuilder = new DbContextOptionsBuilder();
+            optionsBuilder.UseSqlServer(connectionString);
+            Context = new SqlServerSecurityContext(optionsBuilder.Options);
+
             var contextFactory = A.Fake<ISecurityContextFactory>();
-            A.CallTo(() => contextFactory.CreateContext()).Returns(new SqlServerSecurityContext(connectionString));
+            A.CallTo(() => contextFactory.CreateContext()).Returns(Context);
 
             _repository = new SecurityRepository(contextFactory);
         }

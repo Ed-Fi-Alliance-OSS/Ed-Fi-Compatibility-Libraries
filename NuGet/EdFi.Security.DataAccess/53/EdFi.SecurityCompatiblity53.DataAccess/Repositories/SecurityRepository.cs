@@ -4,10 +4,10 @@
 // See the LICENSE and NOTICES files in the project root for more information.
 
 using System;
-using System.Data.Entity;
 using System.Linq;
 using EdFi.Common;
 using EdFi.SecurityCompatiblity53.DataAccess.Contexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace EdFi.SecurityCompatiblity53.DataAccess.Repositories
 {
@@ -26,7 +26,7 @@ namespace EdFi.SecurityCompatiblity53.DataAccess.Repositories
             using (var context = _securityContextFactory.CreateContext())
             {
                 var application =
-                    context.Applications.First(
+                    context.Applications.AsEnumerable().First(
                         app => app.ApplicationName.Equals("Ed-Fi ODS API", StringComparison.InvariantCultureIgnoreCase));
 
                 var actions = context.Actions.ToList();

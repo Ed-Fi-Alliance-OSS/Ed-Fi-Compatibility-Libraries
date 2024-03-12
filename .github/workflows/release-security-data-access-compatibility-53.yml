@@ -21,7 +21,7 @@ jobs:
         shell: pwsh
     outputs:
       hash-code: ${{ steps.hash-code.outputs.hash-code }}
-      security-data-access-version: 5.3.66
+      security-data-access-version: 5.3.67
 
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
@@ -30,11 +30,6 @@ jobs:
 
       - name: Build
         run: dotnet build --configuration Release
-
-      - name: Setup .NET Core 3.1
-        uses: actions/setup-dotnet@607fce577a46308457984d59e4954e075820f10a # v3.0.3
-        with:
-          dotnet-version: 3.1.x
 
       - name: Test
         run: dotnet test --no-build --filter 'FullyQualifiedName!~IntegrationTests' --configuration Release

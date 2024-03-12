@@ -70,7 +70,7 @@ namespace EdFi.SecurityCompatiblity53.DataAccess.Repositories
 
         public virtual Action GetActionByName(string actionName)
         {
-            return Actions.First(a => a.ActionName.Equals(actionName, StringComparison.InvariantCultureIgnoreCase));
+            return Actions.FirstOrDefault(a => a.ActionName.Equals(actionName, StringComparison.InvariantCultureIgnoreCase));
         }
 
         public virtual AuthorizationStrategy GetAuthorizationStrategyByName(string authorizationStrategyName)

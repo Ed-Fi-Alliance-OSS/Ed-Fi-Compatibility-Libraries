@@ -32,7 +32,11 @@ namespace EdFi.SecurityCompatiblity53.DataAccess.Models
         [Required]
         public string ClaimName { get; set; }
 
+        [Column("Application_ApplicationId")]
+        public int ApplicationId { get; set; }
+
         [Required]
+        [ForeignKey("ApplicationId")]
         public Application Application { get; set; }
 
         public int? ParentResourceClaimId { get; set; }
