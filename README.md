@@ -1,5 +1,7 @@
 # Ed-Fi-Compatibility-Libraries
 
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Compatibility-Libraries/badge)](https://securityscorecards.dev/viewer/?uri=github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Compatibility-Libraries)
+
 Shared libraries for backward compatibility support
 
 ## Developer Notes
